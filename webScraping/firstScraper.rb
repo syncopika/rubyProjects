@@ -2,6 +2,10 @@
 #open is a method in the Kernel class
 #open is a method in the File class
 
+=begin
+this web scraper asks for a wikipedia page name and then lists the table of contents for that page
+=end
+
 require "open-uri"
 require 'openssl'
 require "open_uri_redirections"
