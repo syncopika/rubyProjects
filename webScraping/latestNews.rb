@@ -3,9 +3,10 @@
 #open is a method in the File class
 
 require "open-uri"
-require 'openssl'
+require "openssl"
 require "open_uri_redirections"
 require "nokogiri"
+require "time"
 
 base_url = "http://www.trumpetherald.com"
 base_url2 = "http://www.cnn.com"
@@ -19,6 +20,7 @@ doc = Nokogiri::HTML(open(base_url))
 doc2 = Nokogiri::HTML(open(base_url2))
 doc3 = Nokogiri::HTML(open(base_url3))
 doc4 = Nokogiri::HTML(open(base_url4))
+
 
 latestNews = "lastestNews.html"
 file = File.open(latestNews, "w") #makes a new file called latestNews and writes to it
@@ -35,6 +37,8 @@ file.puts "a {text-decoration: none}"
 file.puts "</style>"
 
 file.puts "\n <body>"
+file.puts "<p>" +  Time.now.httpdate + "</p>"
+
 file.puts "<div id='trumpetHerald'>"
 file.puts "<h2><b> latest trumpet herald topics </b></h2>"
 #for trumpetherald (indexing for elements starts at 1 !!)
