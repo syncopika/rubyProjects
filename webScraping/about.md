@@ -7,5 +7,4 @@
 * to access multiple elements of the same type (i.e. multiple anchor elements), the xpath (i.e. //li/a..) should be wrapped in parentheses, which then can be accessed via index (i.e. (//li/a)[0]) to get a specific anchor.
 * there are a few dependencies: "open-uri", 'openssl', "open_uri_redirections", and "nokogiri".    
     
-<h2>ccGetter2.rb</h2>    
--scraper for Chinese characters! I use it with my Chinese quiz app in my javascriptProjects folder.
+
